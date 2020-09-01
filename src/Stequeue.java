@@ -11,6 +11,10 @@ public class Stequeue {
         list.insertAt(0, 55);
 
         list.deleteAt(2);
+        list.enqueue(555);
+
+        list.show();
+        list.pop();
 
         list.show();
     }

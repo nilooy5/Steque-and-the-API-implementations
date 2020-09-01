@@ -29,6 +29,7 @@ public class LinkedList {
     public void insertAt(int index,int data) {
         Node node = new Node();
         node.data = data;
+        System.out.println("Inserting: " + node.data);
         node.next = null;
 
         if(index==0) {
@@ -64,10 +65,35 @@ public class LinkedList {
     public void show() {
         Node node = head;
 
+        System.out.println("Current Staque:");
+
         while(node.next!=null) {
             System.out.println(node.data);
             node = node.next;
         }
         System.out.println(node.data);
+
+        System.out.println();
+    }
+
+    public void push(int data) {
+        insertAtStart(data);
+    }
+
+    public void pop() {
+        System.out.println(head.data + " popped");
+        head = head.next;
+    }
+
+    public void enqueue(int data) {
+        Node node = head;
+        int count = 0;
+        while(node.next!=null) {
+//            System.out.println(node.data);
+            node = node.next;
+            count++;
+        }
+        System.out.println("Enqueuing: " + data);
+        insertAt(count + 1, data);
     }
 }
