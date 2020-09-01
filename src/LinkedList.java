@@ -29,7 +29,7 @@ public class LinkedList {
     public void insertAt(int index,int data) {
         Node node = new Node();
         node.data = data;
-        System.out.println("Inserting: " + node.data);
+        // System.out.println("Inserting: " + node.data);
         node.next = null;
 
         if(index==0) {
@@ -77,11 +77,12 @@ public class LinkedList {
     }
 
     public void push(int data) {
+        System.out.println("Pushed: " + data);
         insertAtStart(data);
     }
 
     public void pop() {
-        System.out.println(head.data + " popped");
+        System.out.println("Popped: " + head.data);
         head = head.next;
     }
 
